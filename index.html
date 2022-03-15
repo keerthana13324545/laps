@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/841afaacdb.js" crossorigin="anonymous"></script>
+        <title></title>
+</head>
+<style>
+        body{
+       background-image: url("Saved Pictures/web.jpg");
+       background-attachment: fixed;
+       background-repeat: no-repeat;
+       /*background-size: cover;*/
+       background-size: 100% 100%; 
+        } 
+        nav li a{
+                text-decoration: none;
+                color: white;
+                margin: left;
+                font-size: 25px;
+                text-transform: uppercase;
+               
+        }
+        nav li a:hover{
+                color: deeppink;
+        }
+        nav ul{
+                float: right ;
+                list-style-type: none;
+               
+        }
+        nav ul li{
+                display: inline-block;
+                padding: 9px;
+               
+        
+        }
+        label #btn,
+        label #cancel{
+                color: white;
+                font-size: 30px;
+                float: right;
+                line-height: 80px;
+                margin-right: 40px;
+                cursor: pointer;
+                display:none;
+        }
+        #check {
+                display: none;
+        }
+        
+
+        
+        @media screen and (min-width:320px) and (max-width:900px){
+                body{
+                        
+       
+                     background-image: url("Saved Pictures/web.jpg");
+                     background-attachment: fixed;
+                     background-repeat: no-repeat;
+                     /*background-size: cover;*/
+                     background-size: 100% 100%;
+               }
+               
+         
+
+        }
+        @media (orientation:portrait) and (max-width:500px){
+        nav ul li{
+                display: block;
+        }
+        nav ul li a{
+                font-size: 20px;
+        }
+     
+        
+       }
+       @media (max-width:600px) {
+               label #btn{
+                       display: block;
+
+               }
+               ul{
+                       position: fixed;
+                       width: 100%;
+                       height: 100vh;
+                       background: black;
+                       top:80px;
+                       left:100%;
+                       text-align: center;
+                       transform: all .5s;
+               }
+               nav ul li{
+                       display: block;
+                       margin: 40px 0;
+                       line-height: 30px;
+
+
+               }
+               nav ul li a{
+                       font-size: 30px;
+               }
+               #check:checked~ul{
+                       left: 0;
+               }
+               #check:checked~label #btn{
+                       display: none;
+               }
+               #check:checked~label #cancel{
+                       display: block;
+               }  
+              
+       }
+
+        
+</style>
+<body>
+       
+        <nav>
+                <input type="checkbox" id="check">
+                <label for="check">
+                        <i class="fas fa-bars" id="btn"></i>
+                        <i class="fas fa-times" id="cancel"></i>
+
+                </label>
+                
+                <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="apple.html">Apple</a></li>
+                        <li><a href="hp.html">Hp</a></li>
+                        <li><a href="len.html">Lenovo</a></li>
+                        <li><a href="acer.html">Acer</a></li>
+                        <li><a href="dell.html">Dell</a></li>
+                    </ul>
+
+        </nav>
+        
+</body>
+</html>
